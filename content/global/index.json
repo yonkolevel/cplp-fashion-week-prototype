@@ -1,0 +1,45 @@
+{
+  "header": {
+    "name": "CPLP FASHION WEEK",
+    "color": "default",
+    "nav": [
+      {
+        "href": "#sobre",
+        "label": "Sobre nós"
+      },
+      {
+        "href": "#programa",
+        "label": "Programa"
+      },
+      {
+        "href": "#contactos",
+        "label": "Contactos"
+      },
+      {
+        "href": "https://www.instagram.com/cplpfashionweek/",
+        "label": "Instagram"
+      }
+    ],
+    "icon": {
+      "name": "Tina",
+      "color": "orange",
+      "style": "float"
+    }
+  },
+  "footer": {
+    "social": [
+      {
+        "icon": {
+          "name": "AiFillInstagram",
+          "color": "orange"
+        },
+        "url": "https://www.instagram.com/cplpfashionweek/"
+      }
+    ]
+  },
+  "theme": {
+    "color": "orange",
+    "font": "sans",
+    "darkMode": "light"
+  }
+}

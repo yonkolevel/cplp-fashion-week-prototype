@@ -19,21 +19,7 @@ Open:
 
 The local editor starts in local mode. Changes update the preview immediately and `Save` writes to the repository filesystem; use `Reset` to discard an experiment. No TinaCloud account is needed for local development.
 
-### Route-protection prototype
-
-`middleware.ts` demonstrates route-level protection without restricting the public homepage:
-
-- `/` remains public.
-- `/admin` and everything below `/admin/*` use HTTP Basic Authentication when protection is enabled.
-- Local development is unprotected by default. To exercise the gate, run:
-
-  ```bash
-  CPLP_ADMIN_AUTH=true CPLP_ADMIN_USER=editor CPLP_ADMIN_PASSWORD='use-a-local-password' npm run dev
-  ```
-
-- Vercel production deployments enable the gate automatically; set `CPLP_ADMIN_USER` and `CPLP_ADMIN_PASSWORD` as server-side environment variables. Preview deployments can opt in with `CPLP_ADMIN_AUTH=true`.
-
-This is intentionally a throwaway proof of route-level access control, not a production identity system. For production, use an authenticated provider such as Cloudflare Access or a real application auth flow rather than a shared Basic Auth password. Never use `NEXT_PUBLIC_*` for the credentials.
+The deployed editor relies on TinaCloud authentication. The public homepage remains accessible without a login, while TinaCloud controls editor authentication and GitHub publishing permissions.
 
 For a production-style smoke build without cloud credentials:
 
